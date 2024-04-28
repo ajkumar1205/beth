@@ -3,13 +3,21 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.tsx",
+    "migrate": "bunx drizzle-kit push:sqlite"
   },
   "dependencies": {
+    "@elysiajs/html": "^1.0.2",
+    "@elysiajs/static": "^1.0.3",
+    "@libsql/client": "^0.6.0",
+    "better-sqlite3": "^9.6.0",
+    "drizzle-orm": "^0.30.9",
     "elysia": "latest"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "drizzle-kit": "^0.20.17",
+    "tailwindcss": "^3.4.3"
   },
-  "module": "src/index.js"
+  "module": "src/index.tsx"
 }
