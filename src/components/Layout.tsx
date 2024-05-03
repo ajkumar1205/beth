@@ -3,8 +3,8 @@ export const Layout = (prop: { children: JSX.Element }) => {
         <html>
             <head>
                 <title>BES/TH</title>
-                <link rel="stylesheet" href="/public/main.css" />
-                <script src="https://unpkg.com/htmx.org/dist/htmx.js"></script>
+                <link rel="stylesheet" href="./public/main.css" />
+                <script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
             </head>
             <body>
                 {prop.children}
