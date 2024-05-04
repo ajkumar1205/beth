@@ -4,22 +4,17 @@ import { staticPlugin } from "@elysiajs/static";
 import { admin } from "./admin";
 import { App } from "./components/App";
 import { Layout } from "./components/Layout";
-import "../public/main.css";
 
 const Response = () =>
-  <div class="text-orange-500">
-    I am from Response
+  <div class="text-red-500">
+    I am a Response
   </div>
 
 
 const app = new Elysia()
   .use(html())
   .use(staticPlugin({
-    headers: {
-      "Cache-Control": "no-cache, no-store, must-revalidate",
-      "Pragma": "no-cache",
-      "Expires": "0"
-    },
+    noCache: true,
     indexHTML: false,
   }))
   .use(admin)
@@ -30,6 +25,7 @@ const app = new Elysia()
   })
   .get("/response", () => <Response />)
   .listen(Bun.env.PORT || 3000);
+
 
 console.log(
   `🦊 Elysia is running at ${app.server?.url}`

@@ -1,5 +1,6 @@
 import { plugin, type BunPlugin } from "bun";
 import { $ } from "bun";
+import { watch } from "fs";
 
 const tailwindReload: BunPlugin = {
     name: "Custom Tailwind Reload Plugin",
