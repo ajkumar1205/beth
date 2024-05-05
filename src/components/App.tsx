@@ -1,9 +1,16 @@
-export const App = () => (
-    <h1 class="text-3xl text-center text-orange-700 cursor-pointer"
-        hx-get="/response"
-        hx-trigger="click"
-        hx-swap="innerHtml"
-    >
-        Hello World
-    </h1>
-)
+export const App = (prop: { children: JSX.Element }) => {
+    return (
+        <html>
+            <head>
+                <title>BETH App</title>
+                <link rel="stylesheet" href="./public/main.css" />
+                <script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
+                <script src="./public/script.js"></script>
+            </head>
+            <body>
+                {prop.children}
+
+            </body>
+        </html>
+    )
+}

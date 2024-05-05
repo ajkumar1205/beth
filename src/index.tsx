@@ -1,9 +1,8 @@
 import { Elysia } from "elysia";
 import { html } from "@elysiajs/html";
 import { staticPlugin } from "@elysiajs/static";
-import { admin } from "./admin";
 import { App } from "./components/App";
-import { Layout } from "./components/Layout";
+import { HomePage } from "./pages/HomePage";
 
 const Response = () =>
   <div class="text-red-500">
@@ -17,11 +16,10 @@ const app = new Elysia()
     noCache: true,
     indexHTML: false,
   }))
-  .use(admin)
   .get("/", () => {
-    return <Layout>
-      <App />
-    </Layout>
+    return <App>
+      <HomePage />
+    </App>
   })
   .get("/response", () => <Response />)
   .listen(Bun.env.PORT || 3000);
