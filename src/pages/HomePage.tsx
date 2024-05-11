@@ -1,5 +1,3 @@
-import { BunSvg } from "../components/BunSvg";
-// import bunsvg from "../../public/bun.svg" assert { type: "text" };
 
 export const HomePage = () => {
     return <div class="w-screen h-screen flex justify-center flex-col items-center bg-gradient-to-br from-gray-300 from-10% via-white via-70% to-emerald-200">

@@ -12,6 +12,8 @@ To update schema
 bun run migrate
 ```
 
+![BETH App](image.png)
+
 ### You can update the configurations according to you.
 
 `bunfig.toml` is used for preload the `tailwind.watch.ts` file for tailwind watch.
